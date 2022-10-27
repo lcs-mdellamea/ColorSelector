@@ -10,7 +10,19 @@ import SwiftUI
 struct ContentView: View {
     // MARK: Stored properties
     @State private var selectHue = 0.0
+    
     // MARK: Computed properties
+    
+    // The selected hue expressed as a value between 0 and 1.0
+    private var hue: Double {
+        return selectHue / 360.0
+    }
+    // Make the color that SwiftUI will use to set the background of the colour swatch
+    private var baseColour: Color {
+        return Color(hue: selectHue,
+                     saturation: 0.8,
+                     brightness: 0.9)
+    }
     
     // Interface
     
@@ -21,12 +33,12 @@ struct ContentView: View {
                 
             }
             .frame(width: 200, height: 200)
-            .background(Color.blue)
+            .background(baseColour)
             
             Text("Hue")
                 .bold()
             
-            Text("\(selectHue)°")
+            Text("\(selectHue.formatted(.number.precision(.fractionLength(1))))°")
             
             Slider(value: $selectHue,
                    in: 0...360,
