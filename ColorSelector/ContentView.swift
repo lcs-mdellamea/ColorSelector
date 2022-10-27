@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: Stored properties
+    @State private var selectHue = 0.0
+    // MARK: Computed properties
+    
+    // Interface
+    
     var body: some View {
         VStack {
             
@@ -20,14 +26,15 @@ struct ContentView: View {
             Text("Hue")
                 .bold()
             
-            Text("210.7°")
+            Text("\(selectHue)°")
             
-            Slider(value: Binding.constant(210.7),
+            Slider(value: $selectHue,
                    in: 0...360,
                    label: { Text("Hue") },
                    minimumValueLabel: { Text("0")},
                    maximumValueLabel: { Text("360")})
-            ()Spacer
+            
+            Spacer()
         }
         .padding()
     }
