@@ -24,6 +24,18 @@ struct ContentView: View {
                      brightness: 0.9)
     }
     
+    private var darkerColour: Color {
+        return Color(hue: selectHue,
+                     saturation: 0.8,
+                     brightness: 0.6)
+    }
+    
+    private var darkestColour: Color {
+        return Color(hue: selectHue,
+                     saturation: 0.8,
+                     brightness: 0.3)
+    }
+    
     // Interface
     
     var body: some View {
@@ -47,6 +59,29 @@ struct ContentView: View {
                    maximumValueLabel: { Text("360")})
             
             Spacer()
+            
+            HStack(spacing: 0) {
+                VStack {
+                    
+                }
+                .frame(width: 200, height: 200)
+                .background(baseColour)
+                
+                VStack {
+                    
+                }
+                .frame(width: 200, height: 200)
+                .background(darkerColour)
+                
+                VStack {
+                    
+                }
+                .frame(width: 200, height: 200)
+                .background(darkestColour)
+            }
+            
+            Spacer()
+            
         }
         .padding()
     }
