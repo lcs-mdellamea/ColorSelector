@@ -19,19 +19,19 @@ struct ContentView: View {
     }
     // Make the color that SwiftUI will use to set the background of the colour swatch
     private var baseColour: Color {
-        return Color(hue: selectHue,
+        return Color(hue: hue,
                      saturation: 0.8,
                      brightness: 0.9)
     }
     
     private var darkerColour: Color {
-        return Color(hue: selectHue,
+        return Color(hue: hue,
                      saturation: 0.8,
                      brightness: 0.6)
     }
     
     private var darkestColour: Color {
-        return Color(hue: selectHue,
+        return Color(hue: hue,
                      saturation: 0.8,
                      brightness: 0.3)
     }
@@ -58,25 +58,23 @@ struct ContentView: View {
                    minimumValueLabel: { Text("0")},
                    maximumValueLabel: { Text("360")})
             
-            Spacer()
-            
             HStack(spacing: 0) {
                 VStack {
                     
                 }
-                .frame(width: 200, height: 200)
+                .frame(width: 50, height: 50)
                 .background(baseColour)
                 
                 VStack {
                     
                 }
-                .frame(width: 200, height: 200)
+                .frame(width: 50, height: 50)
                 .background(darkerColour)
                 
                 VStack {
                     
                 }
-                .frame(width: 200, height: 200)
+                .frame(width: 50, height: 50)
                 .background(darkestColour)
             }
             

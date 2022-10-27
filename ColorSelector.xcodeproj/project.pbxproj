@@ -32,6 +32,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E36FD842290AE452009D80C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E3943BA8290AD80D005B0804 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +58,7 @@
 		E3943BB3290AD80D005B0804 /* ColorSelector */ = {
 			isa = PBXGroup;
 			children = (
+				E36FD842290AE452009D80C0 /* Model */,
 				E3943BB4290AD80D005B0804 /* ColorSelectorApp.swift */,
 				E3943BB6290AD80D005B0804 /* ContentView.swift */,
 				E3943BB8290AD815005B0804 /* Assets.xcassets */,
